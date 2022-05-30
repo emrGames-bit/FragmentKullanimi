@@ -16,7 +16,10 @@ class AnasayfaFragment : Fragment() {
 
 
         tasarim.button.setOnClickListener {
-            Navigation.findNavController(it).navigate(R.id.oyunEkraniGecis)
+            val kisiler = Kisiler("Mehmet",35)
+            val gecis = AnasayfaFragmentDirections.oyunEkraniGecis(ad="Emre",yas=31,bekarMi=true,kisiler=kisiler)
+
+            Navigation.findNavController(it).navigate(gecis)
 
         }
 
