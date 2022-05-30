@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_activity_nav"
+    app:startDestination="@id/anasayfaFragment">
+
+    <fragment
+        android:id="@+id/anasayfaFragment"
+        android:name="com.emrckmk.fragmentkullanimi.AnasayfaFragment"
+        android:label="fragment_anasayfa"
+        tools:layout="@layout/fragment_anasayfa" >
+        <action
+            android:id="@+id/oyunEkraniGecis"
+            app:destination="@id/oyunekraniFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/oyunekraniFragment"
+        android:name="com.emrckmk.fragmentkullanimi.OyunekraniFragment"
+        android:label="fragment_oyunekrani"
+        tools:layout="@layout/fragment_oyunekrani" >
+        <action
+            android:id="@+id/sonucEkraniGecis"
+            app:destination="@id/sonucFragment"
+            app:popUpTo="@id/oyunekraniFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/sonucFragment"
+        android:name="com.emrckmk.fragmentkullanimi.SonucFragment"
+        android:label="fragment_sonuc"
+        tools:layout="@layout/fragment_sonuc" />
+</navigation>
